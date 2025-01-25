@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Psychology Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Psychology Facts</h1>
+        <button id="factButton">Show Random Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "The Bystander Effect: People are less likely to help a victim when there are other people present.",
+            "Cognitive Dissonance: This occurs when a person experiences discomfort due to holding conflicting beliefs or values.",
+            "The Placebo Effect: Patients can experience real changes in their health after receiving a treatment that has no therapeutic effect.",
+            "Maslow's Hierarchy of Needs: This theory suggests that humans have a hierarchy of needs, starting from basic physiological needs to self-actualization.",
+            "The Halo Effect: This cognitive bias causes one positive trait to influence the perception of other unrelated traits.",
+            "Confirmation Bias: People tend to search for, interpret, and remember information in a way that confirms their pre-existing beliefs.",
+            "The Dunning-Kruger Effect: This cognitive bias leads individuals with low ability in a domain to overestimate their competence.",
+            "Social Facilitation: The presence of others can enhance an individual's performance on simple tasks but may hinder performance on complex tasks.",
+            "The Mere Exposure Effect: People tend to develop a preference for things merely because they are familiar with them.",
+            "Sunk Cost Fallacy: This is the tendency to continue an endeavor once an investment in money, effort, or time has been made.",
+            "The Spotlight Effect: Individuals often overestimate how much others notice their appearance or behavior.",
+            "Neuroplasticity: The brain is capable of reorganizing itself by forming new neural connections throughout life.",
+            "Attachment Theory: Early relationships with caregivers can significantly influence an individual's emotional and social development.",
+            "Flow State: This is a mental state where a person is fully immersed in an activity, experiencing a sense of energy and focus.",
+            "The Fundamental Attribution Error: People tend to overemphasize personality traits and underestimate situational factors when explaining others' behaviors."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
